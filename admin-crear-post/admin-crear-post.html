@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fulbo</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://kit.fontawesome.com/d8f5ce9ad5.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="media/pelota.png" alt="Logo del blog"
+        /></a>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li>
+          <a href="../admin-crear-post/admin-crear-post.html">Nuevo Post</a>
+        </li>
+        <li class="dropdown">
+          <a href="../admin-posteos/admin-posteos.html" class="dropdown-btn"
+            >Nombre Usuario</a
+          >
+          <div class="dropdown-content">
+            <a href="../admin-posteos/admin-posteos.html">Mi Perfil</a>
+            <a href="../login/login.html">Cerrar Sesion</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <div class="container">
+        <h2>Crea un nuevo post</h2>
+        <form>
+          <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-group">
+            <label for="description-short">Descripción breve:</label>
+            <textarea
+              id="description-short"
+              name="description-short"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="description-full">Descripción completa:</label>
+            <textarea
+              id="description-full"
+              name="description-full"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Imagen:</label>
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              required
+            />
+          </div>
+          <button type="submit" class="post-button">Postear</button>
+        </form>
+      </div>
+    </section>
+    <aside class="admin">
+      <a href="../admin-posteos/admin-posteos.html">Administrar entradas</a><br>
+      <a href="../admin-usuario/admin-usuarios.html">Administrar usuario</a>
+    </aside>
+    <aside>
+      <h2>
+        Seguinos en nuestras redes sociales para enterarte de todas las
+        novedades al instante!
+      </h2>
+      <ul class="lista-redes">
+        <li><i class="fa-brands fa-facebook fa-flip" style="color: #24F478;"></i><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><i class="fa-brands fa-twitter fa-flip" style="color: #24F478;"></i><a href="https://www.twitter.com/">Twitter</a></li>
+        <li><i class="fa-brands fa-instagram fa-flip" style="color: #24F478;"></i><a href="https://www.instagram.com/">Instagram</a></li>
+      </ul>
+    </aside>
+    <footer>
+      <p>Creado por <a style="color: #24F478;">Nicolas Macias</a> &copy; 2023</p>
+    </footer>
+  </body>
+</html>
