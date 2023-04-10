@@ -173,7 +173,7 @@ aside {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
   width: 200px;
   background-color: #121a21;
   border: 1px solid #ecf0f3;
