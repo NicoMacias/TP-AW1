@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 /* estilos header */
 header {
   height: 110px;
-  background-color: #121A21;
+  background-color: #121a21;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -55,15 +55,16 @@ header {
   align-items: center;
   height: 500px;
   margin-top: 60px;
+  margin-bottom: 80px;
 }
 
 .login-form {
   width: 300px;
   padding: 20px;
-  border: 1px solid #ECF0F3;
+  border: 1px solid #ecf0f3;
   border-radius: 5px;
-  background-color: #121A21;
-  color: #ECF0F3;
+  background-color: #121a21;
+  color: #ecf0f3;
 }
 
 .login-form h2 {
@@ -91,13 +92,13 @@ header {
   width: 100%;
   padding: 8px 0px 8px 3px;
   border-radius: 5px;
-  border: 1px solid #ECF0F3;
+  border: 1px solid #ecf0f3;
 }
 
 .login-form button[type="submit"] {
   font-size: 15px;
   background-color: #4caf50;
-  color: #121A21;
+  color: #121a21;
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -122,10 +123,10 @@ aside {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-45%);
   width: 200px;
-  background-color: #121A21;
-  border: 1px solid #ECF0F3;
+  background-color: #121a21;
+  border: 1px solid #ecf0f3;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -134,7 +135,7 @@ aside {
 aside h2 {
   font-size: 20px;
   margin-top: 0;
-  color: #ECF0F3;
+  color: #ecf0f3;
 }
 
 aside ul {
@@ -151,11 +152,11 @@ aside li a {
   display: block;
   font-size: 16px;
   text-decoration: none;
-  color: #B7C1C8;
+  color: #b7c1c8;
 }
 
 aside li a:hover {
-  color: #24F478;
+  color: #24f478;
 }
 
 /* footer */
@@ -163,7 +164,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #121A21;
+  background-color: #121a21;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -191,7 +192,7 @@ footer p {
     position: static;
     width: auto;
     margin: -30px 10px 10px 10px;
-    background-color: #121A21;
+    background-color: #121a21;
     border: none;
     padding: 10px;
     text-align: center;

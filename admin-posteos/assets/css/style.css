@@ -210,33 +210,45 @@ article img {
   background-color: #1fbb5d;
 }
 
-/* aside */
-.admin {
-  position: fixed;
-  right: 0;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 200px;
-  background-color: #121a21;
-  border: 1px solid #ecf0f3;
+/* seccion de redes */
+.redes {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  text-align: center;
-}
-
-.admin a {
-  text-decoration: none;
   color: #ecf0f3;
 }
 
-.admin a:hover {
+.redes h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.redes ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.redes ul li {
+  margin-right: 30px;
+}
+
+.redes ul li a {
+  text-decoration: none;
+  color: #ecf0f3;
+  margin-left: 10px;
+}
+
+.redes ul li a:hover {
   color: #24f478;
 }
 
+/* aside */
 aside {
   position: fixed;
   right: 0;
-  top: 70%;
-  transform: translateY(-50%);
+  top: 35%;
   width: 200px;
   background-color: #121a21;
   border: 1px solid #ecf0f3;
@@ -245,30 +257,12 @@ aside {
   text-align: center;
 }
 
-aside h2 {
-  font-size: 20px;
-  margin-top: 0;
+aside a {
+  text-decoration: none;
   color: #ecf0f3;
 }
 
-aside ul {
-  list-style: none;
-  margin: 20px 0 0 0;
-  padding: 0;
-}
-
-aside li {
-  margin-bottom: 10px;
-}
-
-aside li a {
-  display: block;
-  font-size: 16px;
-  text-decoration: none;
-  color: #b7c1c8;
-}
-
-aside li a:hover {
+aside a:hover {
   color: #24f478;
 }
 
@@ -308,21 +302,37 @@ footer p {
     margin: 10px 15px 0 15px;
   }
 
+  /* redes */
+  .redes {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .redes ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .redes ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .redes ul li i {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .redes ul li a {
+    margin-left: 0;
+  }
+
   /* aside */
-  .admin {
-    transform: translateY(0%);
-    position: static;
-    width: auto;
-    margin: 10px;
-    border: none;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .admin a {
-    margin: 5px;
-  }
-
   aside {
     right: 0;
     top: 0;
@@ -335,15 +345,5 @@ footer p {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-  }
-
-  .lista-redes {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .lista-redes li {
-    margin-right: 20px;
   }
 }
