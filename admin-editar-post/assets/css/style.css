@@ -109,30 +109,30 @@ nav {
 }
 
 /* form crear post */
-.container {
+.editar-post {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   color: #ecf0f3;
 }
 
-h2 {
+.editar-post h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.form-group {
+.editar-post .form-group {
   margin-bottom: 20px;
 }
 
-label {
+.editar-post label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-input[type="text"],
+.editar-post input[type="text"],
 textarea,
 input[type="file"] {
   width: 100%;
@@ -142,11 +142,11 @@ input[type="file"] {
   border-radius: 5px;
 }
 
-textarea {
+.editar-post textarea {
   height: 150px;
 }
 
-.post-button {
+.editar-post .post-button {
   display: block;
   margin-top: 20px;
   padding: 10px 20px;
@@ -157,7 +157,7 @@ textarea {
   cursor: pointer;
 }
 
-.post-button:hover {
+.editar-post .post-button:hover {
   background-color: #1fbb5d;
 }
 
@@ -234,7 +234,7 @@ footer p {
 /* media queries para acomodar post y aside en mobile */
 @media (max-width: 1140px) {
   /* formulario */
-  .container {
+  .editar-post {
     margin-right: 20px;
   }
 

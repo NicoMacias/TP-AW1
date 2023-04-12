@@ -109,7 +109,7 @@ nav {
 }
 
 /* form crear post */
-.container {
+.crear-post {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -196,7 +196,7 @@ textarea {
 }
 
 /* aside */
-aside {
+.aside-admin {
   position: fixed;
   right: 0;
   top: 35%;
@@ -208,12 +208,12 @@ aside {
   text-align: center;
 }
 
-aside a {
+.aside-admin a {
   text-decoration: none;
   color: #ecf0f3;
 }
 
-aside a:hover {
+.aside-admin a:hover {
   color: #24f478;
 }
 
@@ -233,25 +233,25 @@ footer p {
 
 /* media queries para acomodar post y aside en mobile */
 @media (max-width: 1140px) {
-  /* formulario */
-  .container {
+  /* formulario creacion de post */
+  .crear-post {
     margin-right: 20px;
   }
 
   /* redes */
-  .redes {
+  .redes-admin {
     justify-content: center;
     align-items: center;
   }
 
-  .redes ul {
+  .redes-admin ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
   }
 
-  .redes ul li {
+  .redes-admin ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -259,17 +259,17 @@ footer p {
     margin: 0 10px;
   }
 
-  .redes ul li i {
+  .redes-admin ul li i {
     font-size: 24px;
     margin-bottom: 5px;
   }
 
-  .redes ul li a {
+  .redes-admin ul li a {
     margin-left: 0;
   }
 
   /* aside */
-  aside {
+  .aside-admin {
     right: 0;
     top: 0;
     transform: translateY(0%);

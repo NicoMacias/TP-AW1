@@ -49,14 +49,14 @@ header {
 }
 
 /* formulario */
-.container {
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
 }
 
-.login-form {
+.login .login-form {
   width: 300px;
   padding: 20px;
   border: 1px solid #ecf0f3;
@@ -65,34 +65,34 @@ header {
   color: #ecf0f3;
 }
 
-.login-form h2 {
+.login .login-form h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.login-form form {
+.login .login-form form {
   display: flex;
   flex-direction: column;
 }
 
-.login-form .form-group {
+.login .login-form .form-group {
   margin-bottom: 10px;
 }
 
-.login-form label {
+.login .login-form label {
   display: block;
   margin-bottom: 5px;
 }
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
+.login .login-form input[type="text"],
+.login .login-form input[type="password"] {
   width: 100%;
   padding: 8px 0px 8px 3px;
   border-radius: 5px;
   border: 1px solid #ecf0f3;
 }
 
-.login-form button[type="submit"] {
+.login .login-form button[type="submit"] {
   font-size: 15px;
   background-color: #4caf50;
   color: #121a21;
@@ -102,21 +102,21 @@ header {
   cursor: pointer;
 }
 
-.login-form button[type="submit"]:hover {
+.login .login-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
-.login-form a {
+.login .login-form a {
   color: #4caf50;
   text-decoration: none;
 }
 
-.login-form a:hover {
+.login .login-form a:hover {
   color: #3e8e41;
 }
 
 /* aside */
-aside {
+.aside-corta {
   position: fixed;
   right: 0;
   top: 50%;
@@ -129,35 +129,35 @@ aside {
   text-align: center;
 }
 
-aside h2 {
+.aside-corta h2 {
   font-size: 20px;
   margin-top: 0;
   color: #ecf0f3;
 }
 
-aside ul {
+.aside-corta ul {
   list-style: none;
   margin: 20px 0 0 0;
   padding: 0;
 }
 
-aside li {
+.aside-corta li {
   margin-bottom: 10px;
 }
 
-aside li a {
+.aside-corta li a {
   display: block;
   font-size: 16px;
   text-decoration: none;
   color: #b7c1c8;
 }
 
-aside li a:hover {
+.aside-corta li a:hover {
   color: #24f478;
 }
 
 /* footer */
-footer {
+.footer-abajo {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -169,14 +169,14 @@ footer {
   align-items: center;
 }
 
-footer p {
+.footer-abajo p {
   margin: 0;
 }
 
 /* media queries para acomodar post y aside en mobile */
 @media (max-width: 1000px) {
   /* aside */
-  aside {
+  .aside-corta {
     right: 0;
     top: 0;
     transform: translateY(0%);
@@ -189,13 +189,13 @@ footer p {
     text-align: center;
   }
 
-  .lista-redes {
+  .aside-corta .lista-redes {
     margin-top: 10px;
     display: flex;
     justify-content: center;
   }
 
-  .lista-redes li {
+  .aside-corta .lista-redes li {
     margin-right: 20px;
   }
 }

@@ -114,7 +114,7 @@ nav {
 }
 
 /* formulario */
-.container {
+.editar-usuario {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +123,7 @@ nav {
   margin-bottom: 70px;
 }
 
-.login-form {
+.editar-form {
   width: 300px;
   padding: 20px;
   border: 1px solid #ecf0f3;
@@ -132,35 +132,35 @@ nav {
   color: #ecf0f3;
 }
 
-.login-form h2 {
+.editar-form h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.login-form form {
+.editar-form form {
   display: flex;
   flex-direction: column;
 }
 
-.login-form .form-group {
+.editar-form .form-group {
   margin-bottom: 10px;
 }
 
-.login-form label {
+.editar-form label {
   display: block;
   margin-bottom: 5px;
 }
 
-.login-form input[type="text"],
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.editar-form input[type="text"],
+.editar-form input[type="email"],
+.editar-form input[type="password"] {
   width: 100%;
   padding: 8px 0px 8px 3px;
   border-radius: 5px;
   border: 1px solid #ecf0f3;
 }
 
-.login-form button[type="submit"] {
+.editar-form button[type="submit"] {
   font-size: 15px;
   background-color: #4caf50;
   color: #121a21;
@@ -170,16 +170,16 @@ nav {
   cursor: pointer;
 }
 
-.login-form button[type="submit"]:hover {
+.editar-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
-.login-form a {
+.editar-form a {
   color: #4caf50;
   text-decoration: none;
 }
 
-.login-form a:hover {
+.editar-form a:hover {
   color: #3e8e41;
 }
 
@@ -257,7 +257,7 @@ footer p {
 /* media queries para acomodar post y aside en mobile */
 @media (max-width: 1000px) {
   /* form */
-  .container {
+  .editar-usuario {
     margin-top: 0;
     margin-bottom: 0;
   }
