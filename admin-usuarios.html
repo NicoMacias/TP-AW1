@@ -14,69 +14,79 @@
   <body>
     <header>
       <div class="logo">
-        <a href="../index.html"
+        <a href="index.html"
           ><img src="assets/media/pelota.png" alt="Logo del blog"
         /></a>
       </div>
     </header>
     <nav>
       <ul class="nav-links">
-        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li>
-          <a href="../admin-crear-post/admin-crear-post.html">Nuevo Post</a>
+          <a href="admin-crear-post.html">Nuevo Post</a>
         </li>
         <li class="dropdown">
-          <a href="../admin-posteos/admin-posteos.html" class="dropdown-btn"
-            >Usuario</a
-          >
+          <a href="admin-posteos.html" class="dropdown-btn">Usuario</a>
           <div class="dropdown-content">
-            <a href="../admin-posteos/admin-posteos.html">Mis posteos</a>
-            <a href="../admin-usuario/admin-usuarios.html">Editar usuario</a>
-            <a href="../login/login.html">Cerrar Sesion</a>
+            <a href="admin-posteos.html">Mis posteos</a>
+            <a href="admin-usuarios.html">Editar usuario</a>
+            <a href="login.html">Cerrar Sesion</a>
           </div>
         </li>
       </ul>
     </nav>
-    <section>
-      <div class="container">
-        <h2>Editar post</h2>
-        <form>
+    <section class="editar-usuario">
+      <div class="editar-form">
+        <h2>Editar datos del usuario</h2>
+        <form action="#" method="post">
           <div class="form-group">
-            <label for="title">Título:</label>
-            <input type="text" id="title" name="title" required />
-          </div>
-          <div class="form-group">
-            <label for="description-short">Descripción breve:</label>
-            <textarea
-              id="description-short"
-              name="description-short"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="description-full">Descripción completa:</label>
-            <textarea
-              id="description-full"
-              name="description-full"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group">
-            <label for="image">Imagen:</label>
+            <label for="username">Nombre de usuario</label>
             <input
-              type="file"
-              id="image"
-              name="image"
-              accept="image/*"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Usuario"
               required
             />
           </div>
-          <button type="submit" class="post-button">Postear</button>
+          <div class="form-group">
+            <label for="email">Email del usuario</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Confirmar contraseña</label>
+            <input
+              type="password"
+              id="password-repetir"
+              name="password"
+              placeholder="Repita su contraseña"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button type="submit">Editar</button>
+          </div>
         </form>
       </div>
     </section>
     <section>
-      <div class="redes">
+      <div class="redes-admin">
         <h2>
           Seguinos en nuestras redes sociales para enterarte de todas las
           novedades al instante!
@@ -97,10 +107,9 @@
         </ul>
       </div>
     </section>
-    <aside>
-      <a href="../admin-posteos/admin-posteos.html">Administrar posteos</a
-      ><br />
-      <a href="../admin-usuario/admin-usuarios.html">Editar usuario</a>
+    <aside class="aside-admin">
+      <a href="admin-posteos.html">Administrar posteos</a><br />
+      <a href="admin-usuarios.html">Editar usuario</a>
     </aside>
     <footer>
       <p>Creado por <a style="color: #24f478">Nicolas Macias</a> &copy; 2023</p>

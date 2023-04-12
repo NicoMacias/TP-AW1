@@ -114,14 +114,14 @@ nav {
 }
 
 /* admin-posteos */
-.container {
+.admin-posteos {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   color: #ecf0f3;
 }
 
-.new-post-button {
+.admin-posteos .new-post-button {
   display: block;
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -134,7 +134,7 @@ nav {
 }
 
 /* posteo */
-article {
+.admin-posteos .admin-posteosarticle {
   display: flex;
   margin: 20px 0;
   border: 1px solid #ecf0f3;
@@ -142,27 +142,27 @@ article {
   background-color: #121a21;
 }
 
-article img {
+.admin-posteos article img {
   margin-right: 20px;
   max-width: 30%;
 }
 
-.articulo-info {
+.admin-posteos .articulo-info {
   display: flex;
   flex-direction: column;
 }
 
-.articulo-titulo {
+.admin-posteos .articulo-titulo {
   font-size: 24px;
   padding-top: 10px;
   color: #ecf0f3;
 }
 
-.botones {
+.admin-posteos .botones {
   margin: 10px;
 }
 
-.edit-button {
+.admin-posteos .edit-button {
   display: inline-block;
   padding: 5px 10px;
   background-color: #0077cc;
@@ -174,7 +174,7 @@ article img {
   text-decoration: none;
 }
 
-.delete-button {
+.admin-posteos .delete-button {
   display: inline-block;
   padding: 5px 10px;
   background-color: #cc0000;
@@ -186,15 +186,15 @@ article img {
   text-decoration: none;
 }
 
-.edit-button:hover {
+.admin-posteos .edit-button:hover {
   background-color: #005ea6;
 }
 
-.delete-button:hover {
+.admin-posteos .delete-button:hover {
   background-color: #730000;
 }
 
-.ver-articulo {
+.admin-posteos .ver-articulo {
   background-color: #24f478;
   border: none;
   color: #121a21;
@@ -206,7 +206,7 @@ article img {
   margin: 10px 10px 10px 10px;
 }
 
-.ver-articulo:hover {
+.admin-posteos .ver-articulo:hover {
   background-color: #1fbb5d;
 }
 
@@ -283,7 +283,7 @@ footer p {
 /* media queries para acomodar post y aside en mobile */
 @media (max-width: 1000px) {
   /* posteos */
-  article {
+  .admin-posteos article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,12 +292,12 @@ footer p {
   }
 
   /* post */
-  article img {
+  .admin-posteos article img {
     margin: 0;
     max-width: 100%;
   }
 
-  .articulo-info {
+  .admin-posteos .articulo-info {
     text-align: center;
     margin: 10px 15px 0 15px;
   }
