@@ -10,7 +10,7 @@ body {
   background-color: #192229;
 }
 
-/* estilos header */
+/* header */
 header {
   height: 110px;
   background-color: #121a21;
@@ -48,7 +48,9 @@ header {
   }
 }
 
-/* estilos navbar */
+/* fin header */
+
+/* navbar */
 nav {
   background-color: #121a21;
   height: 60px;
@@ -107,9 +109,10 @@ nav {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* fin navbar */
 
 /* aside */
-aside {
+.aside-index {
   position: fixed;
   right: 0;
   top: 50%;
@@ -122,30 +125,30 @@ aside {
   text-align: center;
 }
 
-aside h2 {
+.aside-index h2 {
   font-size: 20px;
   margin-top: 0;
   color: #ecf0f3;
 }
 
-aside ul {
+.aside-index ul {
   list-style: none;
   margin: 20px 0 0 0;
   padding: 0;
 }
 
-aside li {
+.aside-index li {
   margin-bottom: 10px;
 }
 
-aside li a {
+.aside-index li a {
   display: block;
   font-size: 16px;
   text-decoration: none;
   color: #b7c1c8;
 }
 
-aside li a:hover {
+.aside-index li a:hover {
   color: #24f478;
 }
 
@@ -275,16 +278,15 @@ footer p {
 .redes-admin ul li a:hover {
   color: #24f478;
 }
+/* fin seccion redes */
 
 /* index */
-/* seccion posteos */
-section {
+.articulos {
   display: flex;
   flex-direction: column;
 }
 
-/* post */
-article {
+.articulo-index {
   display: flex;
   margin: 50px 300px 50px 50px;
   border: 1px solid #ecf0f3;
@@ -292,36 +294,36 @@ article {
   background-color: #121a21;
 }
 
-article img {
+.articulo-index img {
   margin-right: 20px;
   max-width: 30%;
 }
 
-.articulo-info {
+.articulo-index .articulo-info {
   display: flex;
   flex-direction: column;
   color: #b7c1c8;
 }
 
-.articulo-titulo {
+.articulo-index .articulo-titulo {
   font-size: 24px;
   margin: 0;
   padding-top: 10px;
   color: #ecf0f3;
 }
 
-.articulo-nombre {
+.articulo-index .articulo-nombre {
   color: #b7c1c8;
   padding-bottom: 10px;
 }
 
-.articulo-descripcion {
+.articulo-index .articulo-descripcion {
   font-size: 16px;
   line-height: 1.4;
-  padding: 10px 20px 20px 0;
+  padding: 10px 0 20px 0;
 }
 
-.ver-articulo {
+.articulo-index .ver-articulo {
   background-color: #24f478;
   border: none;
   color: #121a21;
@@ -333,7 +335,7 @@ article img {
   margin: 10px 10px 10px auto;
 }
 
-.ver-articulo:hover {
+.articulo-index .ver-articulo:hover {
   background-color: #1fbb5d;
 }
 /* fin index */
@@ -378,12 +380,11 @@ article img {
 .post-completo .articulo-info .articulo-descripcion {
   font-size: 16px;
   line-height: 1.4;
-  padding: 10px 20px 20px 0;
+  padding: 10px 0 20px 0;
 }
 /* fin post */
 
 /* admin-crear-post */
-/* form crear post */
 .crear-post {
   max-width: 600px;
   margin: 0 auto;
@@ -421,18 +422,20 @@ input[type="file"] {
   height: 150px;
 }
 
-.crear-post .post-button {
+.crear-post .boton-postear {
   display: block;
-  margin-top: 20px;
+  margin: 40px auto 0 auto;
+  font-size: 18px;
   padding: 10px 20px;
   background-color: #24f478;
   color: #121a21;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
-.crear-post .post-button:hover {
+.crear-post .boton-postear:hover {
   background-color: #1fbb5d;
 }
 /* fin admin-crear-post */
@@ -443,11 +446,25 @@ input[type="file"] {
   margin: 0 auto;
   padding: 20px;
   color: #ecf0f3;
+  align-items: center;
 }
 
-.admin-posteos .new-post-button {
-  display: block;
-  margin-bottom: 20px;
+.titulo-posteos {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-posteos h2 {
+  margin-right: 20px;
+}
+
+.titulo-posteos a {
+  display: block; 
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.admin-posteos .nuevo-post {
   padding: 10px 20px;
   background-color: #24f478;
   border: none;
@@ -457,7 +474,6 @@ input[type="file"] {
   font-size: 15px;
 }
 
-/* posteo */
 .admin-posteos article {
   display: flex;
   margin: 20px 0;
@@ -537,7 +553,6 @@ input[type="file"] {
 /* fin admin-posteos */
 
 /* admin-editar-post */
-/* form editar post */
 .editar-post {
   max-width: 600px;
   margin: 0 auto;
@@ -575,9 +590,10 @@ input[type="file"] {
   height: 150px;
 }
 
-.editar-post .post-button {
+.editar-post .boton-postear {
   display: block;
-  margin-top: 20px;
+  margin: 40px auto 0 auto;
+  font-size: 18px;
   padding: 10px 20px;
   background-color: #24f478;
   color: #121a21;
@@ -586,10 +602,10 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.editar-post .post-button:hover {
+.editar-post .boton-postear:hover {
   background-color: #1fbb5d;
 }
-/* fin admin-posteos */
+/* fin admin-editar-post */
 
 /* admin-usuarios */
 .editar-usuario {
@@ -662,7 +678,7 @@ input[type="file"] {
 }
 /* fin admin-usuarios */
 
-/* fin login */
+/* login */
 .login {
   display: flex;
   justify-content: center;
@@ -803,31 +819,11 @@ input[type="file"] {
 
 /* media queries para acomodar en mobile */
 @media (max-width: 1000px) {
+  .dropdown-content {
+  right: -55%;
+  }
+  
   /* aside */
-  /* aside {
-    right: 0;
-    top: 0;
-    transform: translateY(0%);
-    position: static;
-    width: auto;
-    margin: 10px;
-    background-color: #121a21;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .lista-redes {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .lista-redes li {
-    margin-right: 20px;
-  } */
-
   .aside-corta {
     right: 0;
     top: 0;
@@ -850,7 +846,7 @@ input[type="file"] {
   .aside-corta .lista-redes li {
     margin-right: 20px;
   }
-  /* aside admin */
+
   .aside-admin {
     right: 0;
     top: 0;
@@ -934,6 +930,7 @@ input[type="file"] {
   .redes-admin ul li a {
     margin-left: 0;
   }
+  /* fin redes en admin */
 
   /* footer */
   .footer-abajo {
@@ -943,7 +940,6 @@ input[type="file"] {
   /* fin footer */
 
   /* index */
-  /* posteos */
   .articulo-index {
     display: flex;
     flex-direction: column;
@@ -952,7 +948,6 @@ input[type="file"] {
     max-width: 80%;
   }
 
-  /* post */
   .articulo-index img {
     margin: 0;
     max-width: 100%;
@@ -979,7 +974,6 @@ input[type="file"] {
 
   .post-completo img {
     margin: 0;
-    max-width: 100%;
   }
 
   .post-completo .articulo-info {
@@ -989,14 +983,12 @@ input[type="file"] {
   /* fin post */
 
   /* admin-crear-post */
-  /* formulario creacion de post */
   .crear-post {
     margin-right: 20px;
   }
   /* fin admin-crear-post */
 
   /* admin-posteos */
-  /* posteos */
   .admin-posteos article {
     display: flex;
     flex-direction: column;
@@ -1005,7 +997,10 @@ input[type="file"] {
     max-width: 80%;
   }
 
-  /* post */
+  .titulo-posteos {
+    margin-left: 20px;
+  }
+
   .admin-posteos article img {
     margin: 0;
     max-width: 100%;
