@@ -297,6 +297,7 @@ footer p {
 .articulo-index img {
   margin-right: 20px;
   max-width: 30%;
+  object-fit: cover;
 }
 
 .articulo-index .articulo-info {
