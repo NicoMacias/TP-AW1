@@ -339,6 +339,14 @@ footer p {
 .articulo-index .ver-articulo:hover {
   background-color: #1fbb5d;
 }
+
+.dolar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 /* fin index */
 
 /* post */
@@ -433,7 +441,6 @@ input[type="file"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  
 }
 
 .crear-post .boton-postear:hover {
@@ -460,7 +467,7 @@ input[type="file"] {
 }
 
 .titulo-posteos a {
-  display: block; 
+  display: block;
   padding: 10px 30px;
   text-decoration: none;
 }
@@ -822,9 +829,9 @@ input[type="file"] {
 /* media queries para acomodar en mobile */
 @media (max-width: 1000px) {
   .dropdown-content {
-  right: -55%;
+    right: -55%;
   }
-  
+
   /* aside */
   .aside-corta {
     right: 0;
