@@ -1,40 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fulbo</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/d8f5ce9ad5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"
-          ><img src="assets/media/pelota.png" alt="Logo del blog"
-        /></a>
-      </div>
-    </header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li>
-          <a href="admin-crear-post.html">Nuevo Post</a>
-        </li>
-        <li class="dropdown">
-          <a href="admin-posteos.html" class="dropdown-btn">Usuario</a>
-          <div class="dropdown-content">
-            <a href="admin-posteos.html">Mis posteos</a>
-            <a href="admin-usuarios.html">Editar usuario</a>
-            <a href="login.html">Cerrar Sesion</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
+<?php
+    include('./includes/head.php')
+?>
     <section>
       <article class="post-completo">
         <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
@@ -100,8 +66,6 @@
         </li>
       </ul>
     </aside>
-    <footer>
-      <p>Creado por <a style="color: #24f478">Nicolas Macias</a> &copy; 2023</p>
-    </footer>
-  </body>
-</html>
+<?php
+    include('./includes/footer.html')
+?>
