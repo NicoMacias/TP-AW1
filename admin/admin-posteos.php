@@ -1,5 +1,5 @@
 <?php
-    include('./includes/head.php')
+    include('components/head-admin.php')
 ?>
     <section class="admin-posteos">
       <div class="titulo-posteos">
@@ -9,47 +9,47 @@
         >
       </div>
       <article>
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
+        <img src="../assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
         <div class="articulo-info">
           <h2 class="articulo-titulo">Título del artículo 1</h2>
           <div class="botones">
             <a href="admin-editar-post.php" class="edit-button">Editar</a>
             <a href="" class="delete-button">Eliminar</a>
           </div>
-          <a class="ver-articulo" href="post.php">Ver post</a>
+          <a class="ver-articulo" href="../post.php">Ver post</a>
         </div>
       </article>
       <article>
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
+        <img src="../assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
         <div class="articulo-info">
           <h2 class="articulo-titulo">Título del artículo 1</h2>
           <div class="botones">
             <a href="admin-editar-post.php" class="edit-button">Editar</a>
             <a href="" class="delete-button">Eliminar</a>
           </div>
-          <a class="ver-articulo" href="post.php">Ver post</a>
+          <a class="ver-articulo" href="../post.php">Ver post</a>
         </div>
       </article>
       <article>
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
+        <img src="../assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
         <div class="articulo-info">
           <h2 class="articulo-titulo">Título del artículo 1</h2>
           <div class="botones">
             <a href="admin-editar-post.php" class="edit-button">Editar</a>
             <a href="" class="delete-button">Eliminar</a>
           </div>
-          <a class="ver-articulo" href="post.php">Ver post</a>
+          <a class="ver-articulo" href="../post.php">Ver post</a>
         </div>
       </article>
       <article>
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
+        <img src="../assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
         <div class="articulo-info">
           <h2 class="articulo-titulo">Título del artículo 1</h2>
           <div class="botones">
             <a href="admin-editar-post.php" class="edit-button">Editar</a>
             <a href="" class="delete-button">Eliminar</a>
           </div>
-          <a class="ver-articulo" href="post.php">Ver post</a>
+          <a class="ver-articulo" href="../post.php">Ver post</a>
         </div>
       </article>
     </section>
@@ -57,6 +57,7 @@
       <a href="admin-posteos.php">Administrar posteos</a><br />
       <a href="admin-usuarios.php">Editar usuario</a>
     </aside>
+    <script src="index-admin.js"></script>
 <?php
-    include('./includes/footer.html')
+    include('../components/footer.html')
 ?>

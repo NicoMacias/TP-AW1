@@ -1,16 +1,21 @@
 <?php
-    include('./includes/head-sin-nav.php')
-?>
+    require_once('admin/login-logout.php');
+    include('components/head-sin-nav.php');
+?> 
     <section class="login">
       <div class="login-form">
         <h2>Iniciar sesión</h2>
-        <form action="#" method="post">
+        <form action="" method="post">
+          <?php if(!$loggued && ($user != '' || $pass != '')): ?>
+            <div class='usuario-incorrecto'>
+                El usuario o contraseña son incorrectos.
+            </div>
+          <?php endif; ?>
           <div class="form-group">
-            <label for="username">Nombre de usuario</label>
+            <label for="usuario">Nombre de usuario</label>
             <input
               type="text"
-              id="username"
-              name="username"
+              name="user"
               placeholder="Usuario"
               required
             />
@@ -19,8 +24,7 @@
             <label for="password">Contraseña</label>
             <input
               type="password"
-              id="password"
-              name="password"
+              name="pass"
               placeholder="Contraseña"
               required
             />
@@ -56,5 +60,5 @@
       </ul>
     </aside>
 <?php
-    include('./includes/footer-bajo.html')
+    include('./components/footer-bajo.html')
 ?>

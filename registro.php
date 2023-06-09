@@ -1,5 +1,5 @@
 <?php
-    include('./includes/head-sin-nav.php')
+    include('./components/head-sin-nav.php')
 ?>
     <section class="registro">
         <div class="registro-form">
@@ -77,5 +77,5 @@
       </ul>
     </aside>
 <?php
-    include('./includes/footer-bajo.html')
+    include('./components/footer-bajo.html')
 ?>
