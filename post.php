@@ -1,5 +1,5 @@
 <?php
-    include('./includes/head.php')
+    include('components/head.php');
 ?>
     <section>
       <article class="post-completo">
@@ -65,7 +65,8 @@
           ><a href="https://www.instagram.com/">Instagram</a>
         </li>
       </ul>
-    </aside>
+    </aside>    
 <?php
-    include('./includes/footer.html')
+    include('components/footer.html')
 ?>
+<script src="assets/js/index.js"></script>

@@ -1,8 +1,8 @@
 <?php
-    include('./includes/head.php')
+    include('components/head-admin.php')
 ?>
-    <section class="editar-post">
-      <h2>Editar post</h2>
+    <section class="crear-post">
+      <h2>Crea un nuevo post</h2>
       <form>
         <div class="form-group">
           <label for="title">Título:</label>
@@ -34,13 +34,14 @@
             required
           />
         </div>
-        <button type="submit" class="boton-postear">Editar</button>
+        <button type="submit" class="boton-postear">Postear</button>
       </form>
     </section>
     <aside class="aside-admin">
       <a href="admin-posteos.php">Administrar posteos</a><br />
       <a href="admin-usuarios.php">Editar usuario</a>
     </aside>
+    <script src="index-admin.js"></script>
 <?php
-    include('./includes/footer.html')
+    include('../components/footer.html')
 ?>

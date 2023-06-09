@@ -1,5 +1,5 @@
 <?php
-    include('./includes/head.php')
+    include('components/head-admin.php')
 ?>
     <section class="editar-usuario">
       <div class="editar-form">
@@ -55,6 +55,7 @@
       <a href="admin-posteos.php">Administrar posteos</a><br />
       <a href="admin-usuarios.php">Editar usuario</a>
     </aside>
+    <script src="index-admin.js"></script>
 <?php
-    include('./includes/footer-bajo.html')
+    include('../components/footer-bajo.html')
 ?>

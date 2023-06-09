@@ -1,5 +1,5 @@
 <?php
-    include('./includes/head.php')
+    include('components/head.php')
 ?>
 
 <section class="articulos">
@@ -97,5 +97,6 @@
     ></iframe>
 </section>
 <?php
-    include('./includes/footer.html')
+    include('public/components/footer.html')
 ?>
+<script src="assets/js/index.js"></script>
