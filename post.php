@@ -1,48 +1,41 @@
 <?php
+    require_once('admin/conexion.php');
+
+    if (isset($_GET['id'])) {
+        $sql = "SELECT Entrada.titulo,Entrada.texto,Entrada.imagen,Entrada.fecha,Usuario.nombre FROM Entrada JOIN Usuario ON Entrada.usuario_id=Usuario.id WHERE Entrada.id=?";
+
+        $consulta = $conexion->prepare($sql);
+
+        $consulta->bind_param('i', $_GET['id']);
+
+        $consulta->execute();
+
+        $consulta->bind_result($titulo, $texto, $imagen, $fecha, $nombres);
+
+        $consulta->fetch();
+
+        $consulta->close();
+
+        if ($conexion->error) {
+            echo $conexion->error;
+            die();
+        }
+    }
+
+    $conexion->close();
+
     include('components/head.php');
 ?>
     <section>
       <article class="post-completo">
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
+        <img src="admin/assets/imagenes/<?php echo $imagen; ?>" />
         <div class="articulo-info">
-          <h1 class="articulo-titulo">Título del posteo</h1>
+          <h1 class="articulo-titulo"><?php echo $titulo; ?></h1>
           <p class="articulo-descripcion">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
-            enim id libero dapibus ullamcorper. Suspendisse potenti. Mauris sed
-            ipsum non nibh dapibus aliquet. Donec quis eleifend odio. Donec a
-            aliquet justo. Sed eu metus quis odio ultrices interdum. Sed at
-            malesuada velit. In vitae tellus ut mauris bibendum gravida in sit
-            amet orci. Vivamus id ex orci. Cras consectetur lorem quam, vel
-            mollis ipsum rhoncus eget. Donec sagittis justo eget purus eleifend,
-            ac ultrices libero luctus. Fusce id augue id risus congue venenatis
-            ac et justo. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Nunc sed enim id libero dapibus ullamcorper. Suspendisse
-            potenti. Mauris sed ipsum non nibh dapibus aliquet. Donec quis
-            eleifend odio. Donec a aliquet justo. Sed eu metus quis odio
-            ultrices interdum. Sed at malesuada velit. In vitae tellus ut mauris
-            bibendum gravida in sit amet orci. Vivamus id ex orci. Cras
-            consectetur lorem quam, vel mollis ipsum rhoncus eget. Donec
-            sagittis justo eget purus eleifend, ac ultrices libero luctus. Fusce
-            id augue id risus congue venenatis ac et justo. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Nunc sed enim id libero
-            dapibus ullamcorper. Suspendisse potenti. Mauris sed ipsum non nibh
-            dapibus aliquet. Donec quis eleifend odio. Donec a aliquet justo.
-            Sed eu metus quis odio ultrices interdum. Sed at malesuada velit. In
-            vitae tellus ut mauris bibendum gravida in sit amet orci. Vivamus id
-            ex orci. Cras consectetur lorem quam, vel mollis ipsum rhoncus eget.
-            Donec sagittis justo eget purus eleifend, ac ultrices libero luctus.
-            Fusce id augue id risus congue venenatis ac et justo. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Nunc sed enim id libero
-            dapibus ullamcorper. Suspendisse potenti. Mauris sed ipsum non nibh
-            dapibus aliquet. Donec quis eleifend odio. Donec a aliquet justo.
-            Sed eu metus quis odio ultrices interdum. Sed at malesuada velit. In
-            vitae tellus ut mauris bibendum gravida in sit amet orci. Vivamus id
-            ex orci. Cras consectetur lorem quam, vel mollis ipsum rhoncus eget.
-            Donec sagittis justo eget purus eleifend, ac ultrices libero luctus.
-            Fusce id augue id risus congue venenatis ac et justo.
+            <?php echo nl2br($texto); ?>
           </p>
-          <h4 class="articulo-nombre">Usuario que publico</h4>
-          <p class="articulo-fecha">Fecha de publicación: 5 de abril de 2023</p>
+          <h4 class="articulo-nombre"><?php echo $nombres; ?></h4>
+          <p class="articulo-fecha">Fecha de publicación: <?php echo $fecha; ?></p>
         </div>
       </article>
     </section>

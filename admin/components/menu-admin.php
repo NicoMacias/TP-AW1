@@ -7,14 +7,14 @@
         <li class="dropdown">
             <a href="admin-posteos.php" class="dropdown-btn">
                 <?php 
-                    require_once('./login-logout.php');
-                    echo $user;
+                    require_once('./control-sesion.php');
+                    echo $nombre;
                 ?>
             </a>
             <div class="dropdown-content">
                 <a href="admin-posteos.php">Mis posteos</a>
                 <a href="admin-usuarios.php">Editar usuario</a>
-                <a id="logout">Cerrar Sesion</a>
+                <a href="./control-logout.php">Cerrar Sesion</a>
             </div>
         </li>
     </ul>

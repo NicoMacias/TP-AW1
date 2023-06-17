@@ -1,21 +1,29 @@
 <?php
-    require_once('admin/login-logout.php');
+    session_start();
+    if (isset($_SESSION['usuario_id']) && $_SESSION['usuario_id'] != '') {
+        header('location:index.php');
+    }
     include('components/head-sin-nav.php');
 ?> 
     <section class="login">
       <div class="login-form">
         <h2>Iniciar sesión</h2>
-        <form action="" method="post">
-          <?php if(!$loggued && ($user != '' || $pass != '')): ?>
+        <form action="admin/control-validacion.php" method="post">
+          <?php if(isset($_GET['incorrecta']) && intval($_GET['incorrecta']) === 1): ?>
             <div class='usuario-incorrecto'>
                 El usuario o contraseña son incorrectos.
+            </div>
+          <?php endif; ?>
+          <?php if(isset($_GET['registro']) && intval($_GET['registro']) === 1): ?>
+            <div class='usuario-registrado'>
+                Usuario registrado correctamente, ahora inicie sesion.
             </div>
           <?php endif; ?>
           <div class="form-group">
             <label for="usuario">Nombre de usuario</label>
             <input
-              type="text"
-              name="user"
+              type="email"
+              name="email"
               placeholder="Usuario"
               required
             />

@@ -724,7 +724,7 @@ input[type="file"] {
     margin-bottom: 5px;
 }
 
-.login .login-form input[type="text"],
+.login .login-form input[type="email"],
 .login .login-form input[type="password"] {
     width: 100%;
     padding: 8px 0px 8px 3px;
@@ -760,6 +760,14 @@ input[type="file"] {
     padding: 10px;
     color: #ff0000;
     border: 1px solid #ff0000;
+    border-radius: 10px;
+}
+
+.usuario-registrado {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #24f478;
+    border: 1px solid #1fbb5d;
     border-radius: 10px;
 }
 /* fin login */

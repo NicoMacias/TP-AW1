@@ -1,36 +1,36 @@
 <?php
+    require_once('control-sesion.php');
     include('components/head-admin.php')
 ?>
     <section class="crear-post">
       <h2>Crea un nuevo post</h2>
-      <form>
+      <form action="control-crear-post.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="title">Título:</label>
-          <input type="text" id="title" name="title" required />
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required />
         </div>
         <div class="form-group">
-          <label for="description-short">Descripción breve:</label>
+          <label for="resumen">Descripción breve:</label>
           <textarea
-            id="description-short"
-            name="description-short"
+            id="resumen"
+            name="resumen"
             required
           ></textarea>
         </div>
         <div class="form-group">
-          <label for="description-full">Descripción completa:</label>
+          <label for="texto">Descripción completa:</label>
           <textarea
-            id="description-full"
-            name="description-full"
+            id="texto"
+            name="texto"
             required
           ></textarea>
         </div>
         <div class="form-group">
-          <label for="image">Imagen:</label>
+          <label for="imagen">Imagen:</label>
           <input
             type="file"
-            id="image"
-            name="image"
-            accept="image/*"
+            id="imagen"
+            name="imagen"
             required
           />
         </div>

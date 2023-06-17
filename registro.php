@@ -1,17 +1,21 @@
 <?php
+    session_start();
+    if (isset($_SESSION['usuario_id']) && $_SESSION['usuario_id'] != '') {
+        header('location:index.php');
+    }
     include('./components/head-sin-nav.php')
 ?>
     <section class="registro">
         <div class="registro-form">
           <h2>Registrar usuario</h2>
-          <form action="#" method="post">
+          <form action="admin/control-registro.php" method="post">
             <div class="form-group">
-              <label for="username">Nombre de usuario</label>
+              <label for="username">Nombre</label>
               <input
                 type="text"
-                id="username"
-                name="username"
-                placeholder="Usuario"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
                 required
               />
             </div>
@@ -30,7 +34,7 @@
               <input
                 type="password"
                 id="password"
-                name="password"
+                name="pass"
                 placeholder="Contraseña"
                 required
               />
@@ -40,7 +44,7 @@
               <input
                 type="password"
                 id="password-repetir"
-                name="password"
+                name="pass-repetida"
                 placeholder="Repita su contraseña"
                 required
               />

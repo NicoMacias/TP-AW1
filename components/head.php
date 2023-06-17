@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fulbo</title>
-    <link rel="stylesheet" href="././assets/css/style.css" />
+    <link rel="stylesheet" href="././assets/css/style.css?v=<?php echo time(); ?>" />
     <link rel="icon" href="assets/media/pelota.png">
     <script
       src="https://kit.fontawesome.com/d8f5ce9ad5.js"
@@ -21,9 +21,9 @@
       </div>
     </header>
     <?php
-        require_once('./admin/login-logout.php');
+        require_once('./admin/control-sesion.php');
 
-        if ($loggued != false) {
+        if (isset($_SESSION['loggued']) && $_SESSION['loggued'] == true) {
           include('././admin/components/menu.php');
         } else {
           include('menu.html');

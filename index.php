@@ -1,65 +1,41 @@
 <?php
-    include('components/head.php')
+    require_once('admin/conexion.php');
+
+    $sql = "SELECT Entrada.Id,Entrada.titulo,Entrada.resumen,Entrada.imagen,Entrada.fecha,Usuario.nombre FROM Entrada JOIN Usuario ON Entrada.usuario_id=Usuario.id ORDER BY fecha DESC";
+
+    $consulta = $conexion->prepare($sql);
+
+    $consulta->execute();
+
+    $consulta->bind_result($id, $titulo, $resumen, $imagen, $fecha, $nombre);
+
+    include('components/head.php');
 ?>
 
 <section class="articulos">
-    <article class="articulo-index">
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
-        <div class="articulo-info">
-            <h2 class="articulo-titulo">Título del artículo 1</h2>
-            <p class="articulo-descripcion">
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-            </p>
-            <h4 class="articulo-nombre">
-                Nombre del usuario - 1 de abril de 2023
-            </h4>
-            <a class="ver-articulo" href="post.php">Ver post</a>
-        </div>
-    </article>
-    <article class="articulo-index">
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
-        <div class="articulo-info">
-            <h2 class="articulo-titulo">Título del artículo 1</h2>
-            <p class="articulo-descripcion">
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-            </p>
-            <h4 class="articulo-nombre">
-                Nombre del usuario - 1 de abril de 2023
-            </h4>
-            <a class="ver-articulo" href="post.php">Ver post</a>
-        </div>
-    </article>
-    <article class="articulo-index">
-        <img src="assets/media/lionel-messi_1440x810_wmk.webp" alt="messi" />
-        <div class="articulo-info">
-            <h2 class="articulo-titulo">Título del artículo 1</h2>
-            <p class="articulo-descripcion">
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-                Breve descripción del artículo 1 Breve descripción del artículo
-            </p>
-            <h4 class="articulo-nombre">
-                Nombre del usuario - 1 de abril de 2023
-            </h4>
-            <a class="ver-articulo" href="post.php">Ver post</a>
-        </div>
-    </article>
+    <?php
+        while ($consulta->fetch()) {
+    ?>
+        <article class="articulo-index">
+            <img src="admin/assets/imagenes/<?php echo $imagen; ?>" width="300px" heigth="300px" />
+            <div class="articulo-info">
+                <h2 class="articulo-titulo">
+                    <a style="text-decoration: none; color: #ecf0f3;" href="post.php?id=<?php echo $id; ?>">
+                        <?php echo $titulo; ?>
+                    </a>
+                </h2>
+                <p class="articulo-descripcion">
+                    <?php echo $resumen; ?>
+                </p>
+                <h4 class="articulo-nombre">
+                <?php echo $nombre; ?> - <?php echo $fecha; ?>
+                </h4>
+                <a class="ver-articulo" href="post.php?id=<?php echo $id; ?>">Ver post</a>
+            </div>
+        </article>
+    <?php        
+        }
+    ?>
 </section>
 <aside class="aside-index">
     <h2>
@@ -97,6 +73,6 @@
     ></iframe>
 </section>
 <?php
-    include('public/components/footer.html')
+    include('components/footer.html')
 ?>
 <script src="assets/js/index.js"></script>
