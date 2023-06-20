@@ -51,7 +51,7 @@
         </div>
         <div class="form-group">
           <label for="image">Imagen:</label>
-          <img width="200" src="assets/imagenes/<?php echo $imagen; ?>" alt="">
+          <img width="200" src="../assets/imagenes/<?php echo $imagen; ?>" alt="">
           <input
             type="file"
             id="imagen"

@@ -28,7 +28,7 @@
 ?>
     <section>
       <article class="post-completo">
-        <img src="admin/assets/imagenes/<?php echo $imagen; ?>" />
+        <img src="assets/imagenes/<?php echo $imagen; ?>" />
         <div class="articulo-info">
           <h1 class="articulo-titulo"><?php echo $titulo; ?></h1>
           <p class="articulo-descripcion">

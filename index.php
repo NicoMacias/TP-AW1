@@ -17,7 +17,7 @@
         while ($consulta->fetch()) {
     ?>
         <article class="articulo-index">
-            <img src="admin/assets/imagenes/<?php echo $imagen; ?>" width="300px" heigth="300px" />
+            <img src="assets/imagenes/<?php echo $imagen; ?>" width="300px" heigth="300px" />
             <div class="articulo-info">
                 <h2 class="articulo-titulo">
                     <a style="text-decoration: none; color: #ecf0f3;" href="post.php?id=<?php echo $id; ?>">

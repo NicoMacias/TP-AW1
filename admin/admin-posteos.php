@@ -26,7 +26,7 @@
         while ($consulta->fetch()) {
       ?>
         <article>
-          <img src="assets/imagenes/<?php echo $imagen; ?>" />
+          <img src="../assets/imagenes/<?php echo $imagen; ?>" />
           <div class="articulo-info">
             <h2 class="articulo-titulo"><?php echo $titulo; ?></h2>
             <div class="botones">
