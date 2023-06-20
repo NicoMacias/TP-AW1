@@ -27,13 +27,4 @@ if ($_POST['pass'] == $pass) {
     session_destroy();
     header('location:../login.php?incorrecta=1');
 }
-
-// if (isset($_POST['user']) && isset($_POST['pass'])) {
-//     // $con = new 
-//     if (USER === $_POST['user'] && PASS === $_POST['pass']) {
-//         //echo 'bienvenido';
-//     }
-// }
-
-
 ?>

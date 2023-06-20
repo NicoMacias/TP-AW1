@@ -8,6 +8,16 @@
     <section class="registro">
         <div class="registro-form">
           <h2>Registrar usuario</h2>
+          <?php if(isset($_GET['registro']) && intval($_GET['registro']) === 1): ?>
+            <div class='usuario-incorrecto'>
+                La contraseña no coincide con su confirmacion.
+            </div>
+          <?php endif; ?>
+          <?php if(isset($_GET['registro']) && intval($_GET['registro']) === 2): ?>
+            <div class='usuario-incorrecto'>
+                El mail ingresado ya se encuentra registrado.
+            </div>
+          <?php endif; ?>
           <form action="admin/control-registro.php" method="post">
             <div class="form-group">
               <label for="username">Nombre</label>
@@ -34,7 +44,7 @@
               <input
                 type="password"
                 id="password"
-                name="pass"
+                name="password"
                 placeholder="Contraseña"
                 required
               />
@@ -44,7 +54,7 @@
               <input
                 type="password"
                 id="password-repetir"
-                name="pass-repetida"
+                name="password-repetir"
                 placeholder="Repita su contraseña"
                 required
               />

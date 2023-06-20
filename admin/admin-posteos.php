@@ -44,7 +44,6 @@
       <a href="admin-posteos.php">Administrar posteos</a><br />
       <a href="admin-usuarios.php?id=<?php echo $idUser; ?>">Editar usuario</a>
     </aside>
-    <script src="index-admin.js"></script>
 <?php
     include('../components/footer.html')
 ?>

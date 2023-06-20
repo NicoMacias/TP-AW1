@@ -21,7 +21,11 @@
       <h2>Editar post</h2>
       <?php
         if (isset($_GET['e']) && intval($_GET['e']) === 1) {
-            echo 'Entrada modificada';
+      ?>
+          <div class='usuario-registrado'>
+              El post ha sido modificado correctamente.
+          </div>
+      <?php
         }
       ?>
       <form action="control-editar-post.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">

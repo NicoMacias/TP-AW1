@@ -62,4 +62,3 @@
 <?php
     include('components/footer.html')
 ?>
-<script src="assets/js/index.js"></script>
