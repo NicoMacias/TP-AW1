@@ -7,7 +7,7 @@ if (isset($_FILES['imagen'])) {
     $archivoImagen = $_FILES['imagen']['name'];
     $extension = strtolower(end(explode('.', $archivoImagen)));
     $nombreImagen = time() . '-' . $_SESSION['usuario_id'] . '.' . $extension;
-    $imagenSubida = move_uploaded_file($_FILES['imagen']['tmp_name'], 'assets/imagenes/' . $nombreImagen);
+    $imagenSubida = move_uploaded_file($_FILES['imagen']['tmp_name'], '../assets/imagenes/' . $nombreImagen);
 }
 
 require_once('conexion.php');

@@ -45,5 +45,5 @@
       <a href="admin-usuarios.php?id=<?php echo $idUser; ?>">Editar usuario</a>
     </aside>
 <?php
-    include('../components/footer.html')
+    include('../components/footer-bajo.html')
 ?>

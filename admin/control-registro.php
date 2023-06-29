@@ -2,14 +2,15 @@
 try {
     require_once('conexion.php');
 
+    $password = $_POST['password'];
+    $passwordEncriptada = password_hash($password, PASSWORD_DEFAULT);
+    $passwordRepetir = $_POST['password-repetir'];
+
     $sql = 'INSERT INTO usuario (nombre, email, pass) VALUES(?,?,?)';
 
     $consulta = $conexion->prepare($sql);
 
-    $consulta->bind_param('sss', $_POST['nombre'], $_POST['email'], $_POST['password']);
-
-    $password = $_POST['password'];
-    $passwordRepetir = $_POST['password-repetir'];
+    $consulta->bind_param('sss', $_POST['nombre'], $_POST['email'], $passwordEncriptada);
 
     if ($password == $passwordRepetir) {
         $consulta->execute();

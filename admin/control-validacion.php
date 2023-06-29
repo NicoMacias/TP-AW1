@@ -17,7 +17,7 @@ $consulta->fetch();
 
 $consulta->close();
 
-if ($_POST['pass'] == $pass) {
+if (password_verify($_POST['pass'], $pass)) {
     $_SESSION['usuario_id'] = $id;
     $_SESSION['nombre'] = $nombre;
     $_SESSION['loggued'] = true;
