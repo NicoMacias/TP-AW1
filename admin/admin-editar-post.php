@@ -15,7 +15,7 @@
 
     $consulta->fetch();
 
-    include('components/head-admin.php')
+    include('components/head.php');
 ?>
     <section class="editar-post">
       <h2>Editar post</h2>
@@ -56,6 +56,7 @@
             type="file"
             id="imagen"
             name="imagen"
+            accept="image/*"
           />
         </div>
         <button type="submit" class="boton-postear">Editar</button>
@@ -67,5 +68,5 @@
     </aside>
     <script src="index-admin.js"></script>
 <?php
-    include('../components/footer.html')
+    include('components/footer.php')
 ?>

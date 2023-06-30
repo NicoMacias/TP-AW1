@@ -24,7 +24,7 @@
 
     $conexion->close();
 
-    include('components/head.php');
+    include('admin/components/head.php');
 ?>
     <section>
       <article class="post-completo">
@@ -60,5 +60,5 @@
       </ul>
     </aside>    
 <?php
-    include('components/footer.html')
+    include('admin/components/footer.php')
 ?>

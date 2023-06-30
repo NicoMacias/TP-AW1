@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (empty($_SESSION['usuario_id'])) {
-    if ($_SERVER['PHP_SELF'] == "/index.php") {
-        header('location:./index.php');
+    if ($_SERVER['PHP_SELF'] != "/tp-aw1/index.php") {
+        header('location:../login.php');
         exit();
     }
 } else if (isset($_SESSION['nombre'])) {

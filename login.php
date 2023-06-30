@@ -3,7 +3,7 @@
     if (isset($_SESSION['usuario_id']) && $_SESSION['usuario_id'] != '') {
         header('location:index.php');
     }
-    include('components/head-sin-nav.php');
+    include('admin/components/head.php');
 ?> 
     <section class="login">
       <div class="login-form">
@@ -68,5 +68,5 @@
       </ul>
     </aside>
 <?php
-    include('./components/footer-bajo.html')
+    include('admin/components/footer.php')
 ?>

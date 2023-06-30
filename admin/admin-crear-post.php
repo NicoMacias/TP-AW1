@@ -1,6 +1,7 @@
 <?php
     require_once('control-sesion.php');
-    include('components/head-admin.php')
+    
+    include('components/head.php');
 ?>
     <section class="crear-post">
       <h2>Crea un nuevo post</h2>
@@ -31,6 +32,7 @@
             type="file"
             id="imagen"
             name="imagen"
+            accept="image/*"
             required
           />
         </div>
@@ -42,5 +44,5 @@
       <a href="admin-usuarios.php">Editar usuario</a>
     </aside>
 <?php
-    include('../components/footer.html')
+    include('components/footer.php')
 ?>

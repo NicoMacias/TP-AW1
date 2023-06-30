@@ -305,6 +305,7 @@ footer p {
     display: flex;
     flex-direction: column;
     color: #b7c1c8;
+    width: 100%;
 }
 
 .articulo-index .articulo-titulo {
@@ -371,6 +372,7 @@ footer p {
     flex-direction: column;
     margin-left: 20px;
     color: #b7c1c8;
+    width: 100%;
 }
 
 .post-completo .articulo-info .articulo-titulo {
@@ -500,6 +502,7 @@ input[type="file"] {
 .admin-posteos .articulo-info {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .admin-posteos .articulo-titulo {
@@ -623,8 +626,8 @@ input[type="file"] {
     justify-content: center;
     align-items: center;
     height: 500px;
-    margin-top: 60px;
-    margin-bottom: 70px;
+    /* margin-top: 60px;
+    margin-bottom: 70px; */
 }
 
 .editar-form {
@@ -634,6 +637,7 @@ input[type="file"] {
     border-radius: 5px;
     background-color: #121a21;
     color: #ecf0f3;
+    margin-top: 250px;
 }
 
 .editar-form h2 {
@@ -982,10 +986,11 @@ input[type="file"] {
     .articulo-index .articulo-info {
         text-align: center;
         margin: 10px 15px 0 15px;
+        width: 100%;
     }
 
     .articulo-index .ver-articulo {
-        margin: 10px 10px;
+        margin: 10px;
     }
     /* fin index */
 

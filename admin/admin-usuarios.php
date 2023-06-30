@@ -15,7 +15,7 @@
 
     $consulta->fetch();
 
-    include('components/head-admin.php')
+    include('components/head.php');
 ?>
     <section class="editar-usuario">
       <div class="editar-form">
@@ -104,5 +104,5 @@
     </aside>
     <script src="index-admin.js"></script>
 <?php
-    include('../components/footer.html')
+    include('components/footer.php')
 ?>

@@ -13,7 +13,7 @@
 
     $consulta->bind_result($id, $titulo, $imagen);
 
-    include('components/head-admin.php');
+    include('components/head.php');
 ?>
     <section class="admin-posteos">
       <div class="titulo-posteos">
@@ -45,5 +45,5 @@
       <a href="admin-usuarios.php?id=<?php echo $idUser; ?>">Editar usuario</a>
     </aside>
 <?php
-    include('../components/footer-bajo.html')
+    include('components/footer.php')
 ?>

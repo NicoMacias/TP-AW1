@@ -9,7 +9,7 @@
 
     $consulta->bind_result($id, $titulo, $resumen, $imagen, $fecha, $nombre);
 
-    include('components/head.php');
+    include('admin/components/head.php');
 ?>
 
 <section class="articulos">
@@ -73,5 +73,5 @@
     ></iframe>
 </section>
 <?php
-    include('components/footer.html')
+    include('admin/components/footer.php')
 ?>

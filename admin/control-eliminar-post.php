@@ -13,7 +13,7 @@ $consulta->execute();
 $consulta->bind_result($imagen);
 $consulta->fetch();
 
-$imagenBorrada = unlink('assets/imagenes/' . $imagen);
+$imagenBorrada = unlink('../assets/imagenes/' . $imagen);
 $consulta->close();
 
 if ($imagenBorrada) {
